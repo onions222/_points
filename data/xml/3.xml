@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<doc>
+	<path>D:\pythonSpace\teach_demo\point_regression\data\image\3.png</path>
+	<outputs>
+		<object>
+			<item>
+				<name>point</name>
+				<polygon>
+					<x1>27</x1>
+					<y1>21</y1>
+					<x2>71</x2>
+					<y2>19</y2>
+					<x3>51</x3>
+					<y3>45</y3>
+					<x4>41</x4>
+					<y4>72</y4>
+					<x5>64</x5>
+					<y5>70</y5>
+					<x6>64</x6>
+					<y6>70</y6>
+				</polygon>
+			</item>
+		</object>
+	</outputs>
+	<time_labeled>1636786518838</time_labeled>
+	<labeled>true</labeled>
+	<size>
+		<width>100</width>
+		<height>100</height>
+		<depth>3</depth>
+	</size>
+</doc>
