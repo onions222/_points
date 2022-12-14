@@ -5,12 +5,12 @@ from torchvision import transforms
 from PIL import Image
 
 # 归一化
-tf = transforms.compose(
+tf = transforms.Compose([
     transforms.ToTensor()
-)
+])
 
 
-class my_dataset(Dataset):
+class MyDataset(Dataset):
     def __init__(self, root):
         f = open(root, 'r')
         self.dataset = f.readlines()
@@ -23,14 +23,14 @@ class my_dataset(Dataset):
         img_path = data.split(' ')[0]
         img_data = Image.open(img_path)
         points = data.split(' ')[1:-2]
+
         # 图像大小为100x100，此处是对点进行归一化
         points = [int(i)/100 for i in points]
-
         return tf(img_data), torch.Tensor(points)
 
 
 if __name__ == '__main__':
-    data = my_dataset('dataset_center.txt')
+    data = my_dataset('data_center.txt')
     for i in data:
         print(i[0].shape)
-        print(i[1])
+        print(i[1].shape)
